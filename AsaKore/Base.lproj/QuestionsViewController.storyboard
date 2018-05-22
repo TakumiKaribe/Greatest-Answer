@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Questions View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuestionsViewController" customModule="ThisIsTheCorrectAnswerUntilMorning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「X」で始まる" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPt-r6-XSl">
+                                <rect key="frame" x="129.5" y="150" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXXXXXXは？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-C8-1ek">
+                                <rect key="frame" x="114" y="186" width="146.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-55-cjI">
+                                <rect key="frame" x="107" y="513" width="161" height="30"/>
+                                <state key="normal" title="generate next Question"/>
+                                <connections>
+                                    <action selector="didTapGenerateNextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxh-Mn-auR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-4q-xV6">
+                                <rect key="frame" x="16" y="223" width="343" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="lND-n3-ADx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FM-8h-D4X">
+                                <rect key="frame" x="16" y="319" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="didTapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khR-hT-ACT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myJ-jr-l5f">
+                                <rect key="frame" x="16" y="369" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="didTapResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8q-CD-37H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SVf-55-cjI" firstAttribute="top" secondItem="myJ-jr-l5f" secondAttribute="bottom" constant="110" id="38f-05-g8K"/>
+                            <constraint firstItem="7FM-8h-D4X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Tl-Bs-Ch5"/>
+                            <constraint firstItem="myJ-jr-l5f" firstAttribute="top" secondItem="7FM-8h-D4X" secondAttribute="bottom" constant="16" id="JJt-av-wh1"/>
+                            <constraint firstItem="iIf-4q-xV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PZV-Dz-elm"/>
+                            <constraint firstItem="myJ-jr-l5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Pe0-Kc-Jzn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FM-8h-D4X" secondAttribute="trailing" constant="16" id="Tqk-BM-Smy"/>
+                            <constraint firstItem="PPt-r6-XSl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="Ts3-kU-laU"/>
+                            <constraint firstItem="7FM-8h-D4X" firstAttribute="top" secondItem="iIf-4q-xV6" secondAttribute="bottom" constant="16" id="U9O-qh-Lfs"/>
+                            <constraint firstItem="myJ-jr-l5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UsN-YO-g0g"/>
+                            <constraint firstItem="7FM-8h-D4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WlJ-vp-Mww"/>
+                            <constraint firstItem="H9b-C8-1ek" firstAttribute="top" secondItem="PPt-r6-XSl" secondAttribute="bottom" constant="15" id="cxA-fx-nkC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myJ-jr-l5f" secondAttribute="trailing" constant="16" id="eV4-kE-gH7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iIf-4q-xV6" secondAttribute="trailing" constant="16" id="isI-Vp-Gzw"/>
+                            <constraint firstItem="iIf-4q-xV6" firstAttribute="top" secondItem="H9b-C8-1ek" secondAttribute="bottom" constant="16" id="jme-Ba-dwX"/>
+                            <constraint firstItem="PPt-r6-XSl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jxq-5T-Cf0"/>
+                            <constraint firstItem="iIf-4q-xV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ke7-jb-vQG"/>
+                            <constraint firstItem="SVf-55-cjI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vq5-o1-Dm7"/>
+                            <constraint firstItem="H9b-C8-1ek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wDy-40-OgE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="initialLabel" destination="PPt-r6-XSl" id="rdU-IH-T4i"/>
+                        <outlet property="questionLabel" destination="H9b-C8-1ek" id="LIB-Ui-x1m"/>
+                        <outlet property="timeLabel" destination="iIf-4q-xV6" id="ddc-8e-935"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="118"/>
+        </scene>
+    </scenes>
+</document>
