@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol QuestionViewControllerViewModelDelegate {
+protocol QuestionViewControllerViewModelDelegate: class {
     func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double)
     func questionViewControllerViewModelDidFinishTime(_ questionViewControllerViewModel: QuestionViewControllerViewModel)
 }
 
-struct QuestionViewControllerViewModel {
+final class QuestionViewControllerViewModel {
     weak var delegate: QuestionViewControllerViewModelDelegate?
     private var time = 60.0 { didSet { delegate?.questionViewControllerViewModel(self, didChange: time) } }
     private var timer: Timer? = nil
@@ -30,9 +30,7 @@ struct QuestionViewControllerViewModel {
     func didTapSubtractTimeButton() {
         time = time - 60.0 <= 0.0 ? 0.0 : time - 60.0
     }
-}
-
-private extension QuestionViewControllerViewModel {
+    
     @objc func timeCount() {
         if time <= 0.01 {
             timer?.invalidate()

@@ -80,20 +80,42 @@
                                     <constraint firstAttribute="height" constant="44" id="zgi-WU-GhC"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-uR-7AE">
+                                <rect key="frame" x="16" y="52" width="343" height="162.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME UP!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqv-tu-dWZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="162.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mqv-tu-dWZ" firstAttribute="leading" secondItem="ySd-uR-7AE" secondAttribute="leading" id="JiI-B7-xOo"/>
+                                    <constraint firstAttribute="trailing" secondItem="mqv-tu-dWZ" secondAttribute="trailing" id="RrQ-hc-LpY"/>
+                                    <constraint firstAttribute="bottom" secondItem="mqv-tu-dWZ" secondAttribute="bottom" id="XXD-ye-If2"/>
+                                    <constraint firstItem="mqv-tu-dWZ" firstAttribute="top" secondItem="ySd-uR-7AE" secondAttribute="top" id="sol-I6-kFJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ySd-uR-7AE" firstAttribute="top" secondItem="4mY-1z-Vhn" secondAttribute="top" constant="32" id="3ER-xP-dl4"/>
                             <constraint firstItem="RaQ-90-JLs" firstAttribute="top" secondItem="WYN-Fp-0BS" secondAttribute="bottom" constant="8" id="7Td-Tc-jVl"/>
                             <constraint firstItem="WYN-Fp-0BS" firstAttribute="top" secondItem="Jx9-h8-vy4" secondAttribute="bottom" constant="64" id="7z9-Kt-Z07"/>
                             <constraint firstItem="rmX-75-5Kb" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="16" id="Cq8-9s-c1C"/>
                             <constraint firstItem="rmX-75-5Kb" firstAttribute="top" secondItem="4mY-1z-Vhn" secondAttribute="top" constant="72" id="HAT-xC-uKE"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="RaQ-90-JLs" secondAttribute="trailing" constant="32" id="Kt2-gL-IIH"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="ySd-uR-7AE" secondAttribute="trailing" constant="16" id="PWl-D5-bmu"/>
                             <constraint firstItem="WYN-Fp-0BS" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="bhw-2F-c2F"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="bottom" secondItem="hXs-V6-LYE" secondAttribute="bottom" constant="60" id="bik-U2-Ye8"/>
                             <constraint firstItem="hXs-V6-LYE" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="cLJ-Dd-QTn"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="Jx9-h8-vy4" secondAttribute="trailing" constant="32" id="jTO-nP-UWl"/>
                             <constraint firstItem="Jx9-h8-vy4" firstAttribute="top" secondItem="rmX-75-5Kb" secondAttribute="bottom" constant="8" id="jaB-aK-gYZ"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="hXs-V6-LYE" secondAttribute="trailing" constant="32" id="k1z-7c-ybL"/>
+                            <constraint firstItem="WYN-Fp-0BS" firstAttribute="top" secondItem="ySd-uR-7AE" secondAttribute="bottom" constant="32" id="n4p-fg-K03"/>
+                            <constraint firstItem="ySd-uR-7AE" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="16" id="qdP-wc-onH"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="rmX-75-5Kb" secondAttribute="trailing" constant="16" id="r1F-FR-qCa"/>
                             <constraint firstItem="Jx9-h8-vy4" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="sOV-Ad-c3g"/>
                             <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="WYN-Fp-0BS" secondAttribute="trailing" constant="32" id="sqi-MM-4Sn"/>
@@ -106,6 +128,7 @@
                         <outlet property="questionLabel" destination="RaQ-90-JLs" id="XI8-C1-UAF"/>
                         <outlet property="startButton" destination="FNE-rJ-bKA" id="2jQ-qA-hOB"/>
                         <outlet property="timeLabel" destination="rmX-75-5Kb" id="WTI-u6-WSp"/>
+                        <outlet property="timeUpView" destination="ySd-uR-7AE" id="wnH-Fm-p4p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmo-Pu-zbs" userLabel="First Responder" sceneMemberID="firstResponder"/>

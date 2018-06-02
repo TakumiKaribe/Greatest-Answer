@@ -10,16 +10,19 @@ import UIKit
 
 /// QuestionViewController
 class QuestionViewController: UIViewController {
+    @IBOutlet private weak var timeUpView: UIView!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var initialLabel: UILabel!
     @IBOutlet private weak var questionLabel: UILabel!
     @IBOutlet private weak var startButton: UIButton!
     
-    private let viewModel = QuestionViewControllerViewModel()
+    private var viewModel = QuestionViewControllerViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
+        timeUpView.isHidden = true
+        timeUpView.alpha = 0
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
@@ -51,6 +54,9 @@ extension QuestionViewController: QuestionViewControllerViewModelDelegate {
     }
     
     func questionViewControllerViewModelDidFinishTime(_ questionViewControllerViewModel: QuestionViewControllerViewModel) {
-        // timeup
+        timeUpView.isHidden = false
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            self?.timeUpView.alpha = 1
+        })
     }
 }
