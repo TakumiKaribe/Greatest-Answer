@@ -13,7 +13,7 @@
         <!--Top View Controller-->
         <scene sceneID="JHe-0Y-K2s">
             <objects>
-                <viewController id="yXx-CN-o3k" customClass="TopViewController" customModule="AsaKore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yXx-CN-o3k" customClass="TopViewController" customModule="AsaKore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ee2-01-OQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

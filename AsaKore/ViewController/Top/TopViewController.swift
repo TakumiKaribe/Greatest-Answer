@@ -47,4 +47,10 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
         cell.apply(question: questions[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let questionViewController = QuestionViewController()
+        questionViewController.apply(question: questions[indexPath.row])
+        navigationController?.pushViewController(questionViewController, animated: true)
+    }
 }
