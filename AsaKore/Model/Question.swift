@@ -15,19 +15,9 @@ struct Question: Decodable {
 }
 
 extension Question {
-    func fetchJsonFile() -> Data? {
-        do {
-            return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "PreparedProblems", ofType: "json")!))
-            
-        } catch {
-            return nil
-        }
-    }
-    
-    func decodeFile(by data: Data) -> [Question]? {
+    static func decode(by data: Data) -> [Question]? {
         do {
             return try JSONDecoder().decode([Question].self, from: data)
-            
         } catch {
             return nil
         }

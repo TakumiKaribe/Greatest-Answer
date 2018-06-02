@@ -9,17 +9,26 @@
 import Foundation
 
 final class TopViewControllerViewModel {
-    var questions: [Question]?
-    
-    
+    private var questions: [Question]?
+    init() { setUpQuestions() }
 }
 
 extension TopViewControllerViewModel {
-    
+    func fetchTripleQuestion() -> [Question] {
+        guard let questions = questions else { return [] }
+        var rtn: [Question] = []
+        (0...2).forEach {
+            let random = Int(arc4random_uniform(UInt32(questions.count)))
+            rtn.append(questions[random])
+        }
+        return rtn
+    }
 }
 
 private extension TopViewControllerViewModel {
-    func decode() {
-        
+    func setUpQuestions() {
+        guard let data = JsonStore.Question.fetch() else { return }
+        guard let questions = Question.decode(by: data) else { return }
+        self.questions = questions
     }
 }

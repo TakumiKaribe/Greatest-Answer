@@ -10,7 +10,7 @@ import Foundation
 
 struct JsonStore {
     struct Question {
-        func fetch() -> Data? {
+        static func fetch() -> Data? {
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Questions", ofType: "json")!))
             } catch {
