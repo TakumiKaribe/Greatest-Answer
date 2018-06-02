@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c89-mh-eBC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VPK-fs-XM5">
+            <objects>
+                <viewController id="c89-mh-eBC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VdF-Sp-2qa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-75-5Kb">
+                                <rect key="frame" x="16" y="92" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-h8-vy4">
+                                <rect key="frame" x="32" y="138.5" width="311" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BW-nW-TBr">
+                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="44"/>
+                                        <state key="normal" title="+1 minute"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-09-PR8">
+                                        <rect key="frame" x="155.5" y="0.0" width="155.5" height="44"/>
+                                        <state key="normal" title="-1 minute"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ayW-1S-mDy"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「○」で始まる" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-Fp-0BS">
+                                <rect key="frame" x="32" y="246.5" width="311" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小腹が空いた時食べたくなるスイーツは？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-90-JLs">
+                                <rect key="frame" x="32" y="276" width="311" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-V6-LYE">
+                                <rect key="frame" x="32" y="563" width="311" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNE-rJ-bKA">
+                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="44"/>
+                                        <state key="normal" title="START"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-t7-PzQ">
+                                        <rect key="frame" x="155.5" y="0.0" width="155.5" height="44"/>
+                                        <state key="normal" title="END"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zgi-WU-GhC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RaQ-90-JLs" firstAttribute="top" secondItem="WYN-Fp-0BS" secondAttribute="bottom" constant="8" id="7Td-Tc-jVl"/>
+                            <constraint firstItem="WYN-Fp-0BS" firstAttribute="top" secondItem="Jx9-h8-vy4" secondAttribute="bottom" constant="64" id="7z9-Kt-Z07"/>
+                            <constraint firstItem="rmX-75-5Kb" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="16" id="Cq8-9s-c1C"/>
+                            <constraint firstItem="rmX-75-5Kb" firstAttribute="top" secondItem="4mY-1z-Vhn" secondAttribute="top" constant="72" id="HAT-xC-uKE"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="RaQ-90-JLs" secondAttribute="trailing" constant="32" id="Kt2-gL-IIH"/>
+                            <constraint firstItem="WYN-Fp-0BS" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="bhw-2F-c2F"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="bottom" secondItem="hXs-V6-LYE" secondAttribute="bottom" constant="60" id="bik-U2-Ye8"/>
+                            <constraint firstItem="hXs-V6-LYE" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="cLJ-Dd-QTn"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="Jx9-h8-vy4" secondAttribute="trailing" constant="32" id="jTO-nP-UWl"/>
+                            <constraint firstItem="Jx9-h8-vy4" firstAttribute="top" secondItem="rmX-75-5Kb" secondAttribute="bottom" constant="8" id="jaB-aK-gYZ"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="hXs-V6-LYE" secondAttribute="trailing" constant="32" id="k1z-7c-ybL"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="rmX-75-5Kb" secondAttribute="trailing" constant="16" id="r1F-FR-qCa"/>
+                            <constraint firstItem="Jx9-h8-vy4" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="sOV-Ad-c3g"/>
+                            <constraint firstItem="4mY-1z-Vhn" firstAttribute="trailing" secondItem="WYN-Fp-0BS" secondAttribute="trailing" constant="32" id="sqi-MM-4Sn"/>
+                            <constraint firstItem="RaQ-90-JLs" firstAttribute="leading" secondItem="4mY-1z-Vhn" secondAttribute="leading" constant="32" id="tkl-jx-syu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4mY-1z-Vhn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmo-Pu-zbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="127"/>
+        </scene>
+    </scenes>
+</document>

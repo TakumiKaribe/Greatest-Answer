@@ -1,5 +1,5 @@
 //
-//  QuestionsViewModel.swift
+//  QuestionViewControllerViewModel.swift
 //  ThisIsTheCorrectAnswerUntilMorning
 //
 //  Created by 刈部拓未 on 2018/04/29.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// QuestionsViewModel
-struct QuestionsViewModel {
+struct QuestionViewControllerViewModel {
     var questions = [Question]()
     
     init() {

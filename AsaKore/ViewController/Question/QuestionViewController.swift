@@ -1,5 +1,5 @@
 //
-//  QuestionsViewController.swift
+//  QuestionViewController.swift
 //  ThisIsTheCorrectAnswerUntilMorning
 //
 //  Created by 刈部拓未 on 2017/11/04.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// QuestionsViewController
-class QuestionsViewController: UIViewController {
+/// QuestionViewController
+class QuestionViewController: UIViewController {
     @IBOutlet private weak var initialLabel: UILabel!
     @IBOutlet private weak var questionLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
