@@ -11,6 +11,7 @@ import UIKit
 
 protocol QuestionViewControllerViewModelDelegate {
     func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double)
+    func questionViewControllerViewModelDidFinishTime(_ questionViewControllerViewModel: QuestionViewControllerViewModel)
 }
 
 struct QuestionViewControllerViewModel {
@@ -35,6 +36,7 @@ private extension QuestionViewControllerViewModel {
     @objc func timeCount() {
         if time <= 0.01 {
             timer?.invalidate()
+            delegate?.questionViewControllerViewModelDidFinishTime(self)
         }
         
         time -= 0.01

@@ -49,4 +49,8 @@ extension QuestionViewController: QuestionViewControllerViewModelDelegate {
     func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double) {
         timeLabel.text = "残り\(time)秒"
     }
+    
+    func questionViewControllerViewModelDidFinishTime(_ questionViewControllerViewModel: QuestionViewControllerViewModel) {
+        // timeup
+    }
 }
