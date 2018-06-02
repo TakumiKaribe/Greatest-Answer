@@ -71,7 +71,7 @@ private extension QuestionsViewController {
     }
     
     @objc func timeCount() {
-        if time <= 0 {
+        if time <= 1 {
             timer?.invalidate()
         }
         
