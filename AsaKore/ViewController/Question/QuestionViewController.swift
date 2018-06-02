@@ -19,8 +19,6 @@ class QuestionViewController: UIViewController {
     private var time = 0.0 { didSet { timeLabel.text = "残り\(time)秒" } }
     private var timer: Timer? = nil
     
-    private var onTimerFlag = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         time = 60.0
@@ -35,14 +33,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
-        if !onTimerFlag {
-            onTimerFlag = true
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
-        } else {
-            onTimerFlag = false
-            timer?.invalidate()
-            timer = nil
-        }
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
     }
     
     @IBAction func didTapEndButton(_ sender: Any) {
