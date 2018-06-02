@@ -17,6 +17,8 @@ final class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = viewModel.fetchTripleQuestion()
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
+        tableView.layer.borderWidth = 1
         tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell")
     }
     
