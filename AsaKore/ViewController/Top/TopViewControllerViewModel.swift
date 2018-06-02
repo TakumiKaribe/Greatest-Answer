@@ -13,11 +13,12 @@ final class TopViewControllerViewModel {
     init() { setUpQuestions() }
 }
 
+// MARK: - Extension
 extension TopViewControllerViewModel {
     func fetchTripleQuestion() -> [Question] {
         guard let questions = questions else { return [] }
         var rtn: [Question] = []
-        (0...2).forEach {
+        (0...2).forEach { _ in 
             let random = Int(arc4random_uniform(UInt32(questions.count)))
             rtn.append(questions[random])
         }
@@ -25,6 +26,7 @@ extension TopViewControllerViewModel {
     }
 }
 
+// MARK: - Private Extension
 private extension TopViewControllerViewModel {
     func setUpQuestions() {
         guard let data = JsonStore.Question.fetch() else { return }
