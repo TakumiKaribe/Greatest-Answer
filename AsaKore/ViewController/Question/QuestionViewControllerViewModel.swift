@@ -7,43 +7,36 @@
 //
 
 import Foundation
+import UIKit
 
-/// QuestionsViewModel
+protocol QuestionViewControllerViewModelDelegate {
+    func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double)
+}
+
 struct QuestionViewControllerViewModel {
-    var questions = [Question]()
+    weak var delegate: QuestionViewControllerViewModelDelegate?
+    private var time = 60.0 { didSet { delegate?.questionViewControllerViewModel(self, didChange: time) } }
+    private var timer: Timer? = nil
     
-    init() {
-        guard let data = fetchJsonFile() else { return }
-        guard let questions = decodeFile(by: data) else { return }
-        self.questions = questions
+    func didTapStartButton() {
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
+    }
+    
+    func didTapAddTimeButton() {
+        time += 60.0
+    }
+    
+    func didTapSubtractTimeButton() {
+        time = time - 60.0 <= 0.0 ? 0.0 : time - 60.0
     }
 }
 
-// MARK: - Extension
-extension QuestionViewControllerViewModel {
-    func randNum() -> Int {
-        return Int(arc4random_uniform(UInt32(questions.count)))
-    }
-}
-
-
-// MARK: - Private Extension
 private extension QuestionViewControllerViewModel {
-    func fetchJsonFile() -> Data? {
-        do {
-            return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "PreparedProblems", ofType: "json")!))
-            
-        } catch {
-            return nil
+    @objc func timeCount() {
+        if time <= 0.01 {
+            timer?.invalidate()
         }
-    }
-    
-    func decodeFile(by data: Data) -> [Question]? {
-        do {
-            return try JSONDecoder().decode([Question].self, from: data)
-            
-        } catch {
-            return nil
-        }
+        
+        time -= 0.01
     }
 }

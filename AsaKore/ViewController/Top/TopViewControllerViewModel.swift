@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class TopViewControllerViewModel {
+struct TopViewControllerViewModel {
     private var questions: [Question]?
     init() { setUpQuestions() }
 }

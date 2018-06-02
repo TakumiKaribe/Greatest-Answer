@@ -104,6 +104,7 @@
                     <connections>
                         <outlet property="initialLabel" destination="WYN-Fp-0BS" id="EV8-Rd-BOZ"/>
                         <outlet property="questionLabel" destination="RaQ-90-JLs" id="XI8-C1-UAF"/>
+                        <outlet property="startButton" destination="FNE-rJ-bKA" id="2jQ-qA-hOB"/>
                         <outlet property="timeLabel" destination="rmX-75-5Kb" id="WTI-u6-WSp"/>
                     </connections>
                 </viewController>

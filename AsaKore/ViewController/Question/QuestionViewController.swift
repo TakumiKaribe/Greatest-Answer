@@ -10,30 +10,29 @@ import UIKit
 
 /// QuestionViewController
 class QuestionViewController: UIViewController {
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var initialLabel: UILabel!
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var initialLabel: UILabel!
+    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var startButton: UIButton!
     
     private let viewModel = QuestionViewControllerViewModel()
     
-    private var time = 0.0 { didSet { timeLabel.text = "残り\(time)秒" } }
-    private var timer: Timer? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        time = 60.0
-    }
-    
-    @IBAction func didTapAddTimeButton(_ sender: Any) {
-        time += 60.0
-    }
-    
-    @IBAction func didTapSubtractTimeButton(_ sender: Any) {
-        time = time - 60.0 <= 0.0 ? 0.0 : time - 60.0
+        viewModel.delegate = self
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
+        viewModel.didTapStartButton()
+        startButton.isEnabled = false
+    }
+    
+    @IBAction func didTapAddTimeButton(_ sender: Any) {
+        viewModel.didTapAddTimeButton()
+    }
+    
+    @IBAction func didTapSubtractTimeButton(_ sender: Any) {
+        viewModel.didTapSubtractTimeButton()
     }
     
     @IBAction func didTapEndButton(_ sender: Any) {
@@ -46,13 +45,8 @@ class QuestionViewController: UIViewController {
     }
 }
 
-/// MARK: - Private Extension
-private extension QuestionViewController {
-    @objc func timeCount() {
-        if time <= 0.01 {
-            timer?.invalidate()
-        }
-        
-        time -= 0.01
+extension QuestionViewController: QuestionViewControllerViewModelDelegate {
+    func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double) {
+        timeLabel.text = "残り\(time)秒"
     }
 }
