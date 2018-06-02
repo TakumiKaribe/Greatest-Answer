@@ -25,6 +25,10 @@
                                     <constraint firstAttribute="height" constant="264" id="6du-kC-bnf"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yXx-CN-o3k" id="be0-2w-tdb"/>
+                                    <outlet property="delegate" destination="yXx-CN-o3k" id="6bj-XE-Cca"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbX-tR-CIS">
                                 <rect key="frame" x="16" y="551" width="343" height="44"/>
