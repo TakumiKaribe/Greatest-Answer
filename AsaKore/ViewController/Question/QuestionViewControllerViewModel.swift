@@ -16,8 +16,13 @@ protocol QuestionViewControllerViewModelDelegate: class {
 
 final class QuestionViewControllerViewModel {
     weak var delegate: QuestionViewControllerViewModelDelegate?
+    let question: Question
     private var time = 60.0 { didSet { delegate?.questionViewControllerViewModel(self, didChange: time) } }
     private var timer: Timer? = nil
+    
+    init(question: Question) {
+        self.question = question
+    }
     
     func didTapStartButton() {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
@@ -32,7 +37,7 @@ final class QuestionViewControllerViewModel {
     }
     
     @objc func timeCount() {
-        if time <= 0.01 {
+        if time < 0 {
             timer?.invalidate()
             delegate?.questionViewControllerViewModelDidFinishTime(self)
         }

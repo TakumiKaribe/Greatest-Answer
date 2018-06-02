@@ -16,26 +16,29 @@ class QuestionViewController: UIViewController {
     @IBOutlet private weak var questionLabel: UILabel!
     @IBOutlet private weak var startButton: UIButton!
     
-    private var viewModel = QuestionViewControllerViewModel()
+    private var viewModel: QuestionViewControllerViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        viewModel?.delegate = self
         timeUpView.isHidden = true
         timeUpView.alpha = 0
+        guard let viewModel = viewModel else { return }
+        initialLabel.text = "「\(viewModel.question.initial)」で始まる"
+        questionLabel.text = "\(viewModel.question.question)は？"
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
-        viewModel.didTapStartButton()
+        viewModel?.didTapStartButton()
         startButton.isEnabled = false
     }
     
     @IBAction func didTapAddTimeButton(_ sender: Any) {
-        viewModel.didTapAddTimeButton()
+        viewModel?.didTapAddTimeButton()
     }
     
     @IBAction func didTapSubtractTimeButton(_ sender: Any) {
-        viewModel.didTapSubtractTimeButton()
+        viewModel?.didTapSubtractTimeButton()
     }
     
     @IBAction func didTapEndButton(_ sender: Any) {
@@ -43,14 +46,13 @@ class QuestionViewController: UIViewController {
     }
     
     func apply(question: Question) {
-        initialLabel.text = "「\(question.initial)」で始まる"
-        questionLabel.text = "\(question.question)は？"
+        viewModel = QuestionViewControllerViewModel(question: question)
     }
 }
 
 extension QuestionViewController: QuestionViewControllerViewModelDelegate {
     func questionViewControllerViewModel(_ questionViewControllerViewModel: QuestionViewControllerViewModel, didChange time: Double) {
-        timeLabel.text = "残り\(time)秒"
+        timeLabel.text = String(format: "%.2f", time)
     }
     
     func questionViewControllerViewModelDidFinishTime(_ questionViewControllerViewModel: QuestionViewControllerViewModel) {

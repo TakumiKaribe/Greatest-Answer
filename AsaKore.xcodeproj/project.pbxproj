@@ -131,8 +131,8 @@
 		2A10CB2620C28E4F00CCE95E /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				2A7BA6D820B46DEE00A7798D /* QuestionViewController.storyboard */,
 				2A7BA6D220B46C5100A7798D /* QuestionViewController.swift */,
+				2A7BA6D820B46DEE00A7798D /* QuestionViewController.storyboard */,
 				2A7BA6D120B46C5100A7798D /* QuestionViewControllerViewModel.swift */,
 			);
 			path = Question;

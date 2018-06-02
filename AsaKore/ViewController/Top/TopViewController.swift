@@ -22,6 +22,12 @@ final class TopViewController: UIViewController {
         tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     @IBAction func didTapChangeQuestionButton(_ sender: Any) {
         questions = viewModel.fetchTripleQuestion()
         tableView.reloadData()
@@ -49,7 +55,7 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let questionViewController = QuestionViewController()
+        let questionViewController = QuestionViewController.instantiate()
         questionViewController.apply(question: questions[indexPath.row])
         navigationController?.pushViewController(questionViewController, animated: true)
     }
