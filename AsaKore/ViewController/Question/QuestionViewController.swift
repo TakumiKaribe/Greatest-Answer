@@ -10,11 +10,11 @@ import UIKit
 
 /// QuestionViewController
 class QuestionViewController: UIViewController {
-    @IBOutlet private weak var initialLabel: UILabel!
-    @IBOutlet private weak var questionLabel: UILabel!
-    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var initialLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
-    private var viewModel: QuestionsViewModel?
+    private let viewModel = QuestionViewControllerViewModel()
     
     private var time = 60
     private var timer: Timer? = nil
@@ -23,9 +23,16 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = QuestionsViewModel()
         applyLabel(index: 0)
         apply(time: time)
+    }
+    
+    @IBAction func didTapAddTimeButton(_ sender: Any) {
+        time += 60
+    }
+    
+    @IBAction func didTapSubtractTimeButton(_ sender: Any) {
+        time = time - 60 < 0 ? 0 : time - 60
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
@@ -39,20 +46,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapResetButton(_ sender: Any) {
-        if onTimerFlag {
-            onTimerFlag = false
-            timer?.invalidate()
-            timer = nil
-        }
-        
-        time = 60
-        apply(time: time)
-    }
-    
-    @IBAction func didTapGenerateNextQuestionButton(_ sender: Any) {
-        guard let num = viewModel?.randNum() else { return }
-        applyLabel(index: num)
+    @IBAction func didTapEndButton(_ sender: Any) {
     }
 }
 

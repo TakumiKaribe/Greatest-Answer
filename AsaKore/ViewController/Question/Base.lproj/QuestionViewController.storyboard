@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="VPK-fs-XM5">
             <objects>
-                <viewController id="c89-mh-eBC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="c89-mh-eBC" customClass="QuestionViewController" customModule="AsaKore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VdF-Sp-2qa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BW-nW-TBr">
                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="44"/>
                                         <state key="normal" title="+1 minute"/>
+                                        <connections>
+                                            <action selector="didTapAddTimeButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="Vxh-6z-By5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-09-PR8">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="44"/>
                                         <state key="normal" title="-1 minute"/>
+                                        <connections>
+                                            <action selector="didTapSubtractTimeButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="AFc-Yk-RDa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -58,10 +64,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNE-rJ-bKA">
                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="44"/>
                                         <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="didTapStartButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="2YK-oC-FfO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-t7-PzQ">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="44"/>
                                         <state key="normal" title="END"/>
+                                        <connections>
+                                            <action selector="didTapEndButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="YLp-t5-7ya"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -89,6 +101,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4mY-1z-Vhn"/>
                     </view>
+                    <connections>
+                        <outlet property="initialLabel" destination="WYN-Fp-0BS" id="EV8-Rd-BOZ"/>
+                        <outlet property="questionLabel" destination="RaQ-90-JLs" id="XI8-C1-UAF"/>
+                        <outlet property="timeLabel" destination="rmX-75-5Kb" id="WTI-u6-WSp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmo-Pu-zbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
