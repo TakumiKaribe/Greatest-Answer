@@ -20,7 +20,7 @@ struct QuestionViewControllerViewModel {
 }
 
 // MARK: - Extension
-extension QuestionsViewModel {
+extension QuestionViewControllerViewModel {
     func randNum() -> Int {
         return Int(arc4random_uniform(UInt32(questions.count)))
     }
@@ -28,7 +28,7 @@ extension QuestionsViewModel {
 
 
 // MARK: - Private Extension
-private extension QuestionsViewModel {
+private extension QuestionViewControllerViewModel {
     func fetchJsonFile() -> Data? {
         do {
             return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "PreparedProblems", ofType: "json")!))

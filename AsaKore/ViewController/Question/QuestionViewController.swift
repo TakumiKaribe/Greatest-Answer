@@ -16,29 +16,28 @@ class QuestionViewController: UIViewController {
     
     private let viewModel = QuestionViewControllerViewModel()
     
-    private var time = 60
+    private var time = 0.0 { didSet { timeLabel.text = "残り\(time)秒" } }
     private var timer: Timer? = nil
     
     private var onTimerFlag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        applyLabel(index: 0)
-        apply(time: time)
+        time = 60.0
     }
     
     @IBAction func didTapAddTimeButton(_ sender: Any) {
-        time += 60
+        time += 60.0
     }
     
     @IBAction func didTapSubtractTimeButton(_ sender: Any) {
-        time = time - 60 < 0 ? 0 : time - 60
+        time = time - 60.0 <= 0.0 ? 0.0 : time - 60.0
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
         if !onTimerFlag {
             onTimerFlag = true
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timeCount), userInfo: nil, repeats: true)
         } else {
             onTimerFlag = false
             timer?.invalidate()
@@ -47,29 +46,22 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func didTapEndButton(_ sender: Any) {
+        // pop
+    }
+    
+    func apply(question: Question) {
+        initialLabel.text = "「\(question.initial)」で始まる"
+        questionLabel.text = "\(question.question)は？"
     }
 }
 
 /// MARK: - Private Extension
-private extension QuestionsViewController {
-    func applyLabel(index: Int) {
-        guard let questions = viewModel?.questions else { return }
-        
-        let question = questions[index]
-        initialLabel.text = "「\(question.initial)」で始まる"
-        questionLabel.text = "\(question.question)は？"
-    }
-    
-    func apply(time: Int) {
-        timeLabel.text = "残り\(time)秒"
-    }
-    
+private extension QuestionViewController {
     @objc func timeCount() {
-        if time <= 1 {
+        if time <= 0.01 {
             timer?.invalidate()
         }
         
-        time -= 1
-        apply(time: time)
+        time -= 0.01
     }
 }
