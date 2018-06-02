@@ -10,4 +10,5 @@ import Foundation
 import UIKit
 
 final class TopViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
 }

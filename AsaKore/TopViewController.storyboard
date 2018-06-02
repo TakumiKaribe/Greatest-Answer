@@ -17,9 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="ee2-01-OQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7EH-h8-FgT">
+                                <rect key="frame" x="16" y="201" width="343" height="264"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="6du-kC-bnf"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbX-tR-CIS">
+                                <rect key="frame" x="16" y="551" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NoF-Kj-sfR"/>
+                                </constraints>
+                                <state key="normal" title="問題を変える"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題を選んでください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7G-og-WO1">
+                                <rect key="frame" x="16" y="92" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NLx-Ds-xYg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="w7G-og-WO1" secondAttribute="trailing" constant="16" id="2ey-DU-BgC"/>
+                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="RbX-tR-CIS" secondAttribute="trailing" constant="16" id="Iix-fb-DEG"/>
+                            <constraint firstItem="w7G-og-WO1" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="OWk-Mb-vXu"/>
+                            <constraint firstItem="RbX-tR-CIS" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="TDE-BP-BLN"/>
+                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="bottom" secondItem="RbX-tR-CIS" secondAttribute="bottom" constant="72" id="YC7-df-kAC"/>
+                            <constraint firstItem="7EH-h8-FgT" firstAttribute="centerY" secondItem="ee2-01-OQg" secondAttribute="centerY" id="bot-1Z-0Jy"/>
+                            <constraint firstItem="w7G-og-WO1" firstAttribute="top" secondItem="ZJe-WN-h1F" secondAttribute="top" constant="72" id="e66-oU-Uyi"/>
+                            <constraint firstItem="7EH-h8-FgT" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="oBo-VI-Juw"/>
+                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="7EH-h8-FgT" secondAttribute="trailing" constant="16" id="t3c-Fi-Ev9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZJe-WN-h1F"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7EH-h8-FgT" id="M0d-TJ-JWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndY-6I-61j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
