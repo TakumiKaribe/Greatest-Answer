@@ -36,6 +36,9 @@
                                     <constraint firstAttribute="height" constant="44" id="NoF-Kj-sfR"/>
                                 </constraints>
                                 <state key="normal" title="問題を変える"/>
+                                <connections>
+                                    <action selector="didTapChangeQuestionButton:" destination="yXx-CN-o3k" eventType="touchUpInside" id="5Cb-LQ-IDZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題を選んでください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7G-og-WO1">
                                 <rect key="frame" x="16" y="92" width="343" height="44"/>

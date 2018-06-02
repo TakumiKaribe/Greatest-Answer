@@ -19,6 +19,11 @@ final class TopViewController: UIViewController {
         questions = viewModel.fetchTripleQuestion()
         tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell")
     }
+    
+    @IBAction func didTapChangeQuestionButton(_ sender: Any) {
+        questions = viewModel.fetchTripleQuestion()
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
