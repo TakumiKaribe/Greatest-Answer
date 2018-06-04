@@ -46,14 +46,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BW-nW-TBr">
                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="44"/>
-                                        <state key="normal" title="+1 minute"/>
+                                        <state key="normal" title="+60 second"/>
                                         <connections>
                                             <action selector="didTapAddTimeButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="Vxh-6z-By5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-09-PR8">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="44"/>
-                                        <state key="normal" title="-1 minute"/>
+                                        <state key="normal" title="-60 second"/>
                                         <connections>
                                             <action selector="didTapSubtractTimeButton:" destination="c89-mh-eBC" eventType="touchUpInside" id="AFc-Yk-RDa"/>
                                         </connections>
