@@ -1,0 +1,85 @@
+[
+ { "value": "あ" },
+ { "value": "い" },
+ { "value": "う" },
+ { "value": "え" },
+ { "value": "お" },
+ 
+ { "value": "か" },
+ { "value": "き" },
+ { "value": "く" },
+ { "value": "け" },
+ { "value": "こ" },
+ 
+ { "value": "が" },
+ { "value": "ぎ" },
+ { "value": "ぐ" },
+ { "value": "げ" },
+ { "value": "ご" },
+ 
+ { "value": "さ" },
+ { "value": "し" },
+ { "value": "す" },
+ { "value": "せ" },
+ { "value": "そ" },
+ 
+ { "value": "ざ" },
+ { "value": "じ" },
+ { "value": "ず" },
+ { "value": "ぜ" },
+ { "value": "ぞ" },
+
+ { "value": "た" },
+ { "value": "ち" },
+ { "value": "つ" },
+ { "value": "て" },
+ { "value": "と" },
+
+ { "value": "だ" },
+ { "value": "ぢ" },
+ { "value": "づ" },
+ { "value": "で" },
+ { "value": "ど" },
+
+ { "value": "な" },
+ { "value": "に" },
+ { "value": "ぬ" },
+ { "value": "ね" },
+ { "value": "の" },
+
+ { "value": "は" },
+ { "value": "ひ" },
+ { "value": "ふ" },
+ { "value": "へ" },
+ { "value": "ほ" },
+
+ { "value": "ば" },
+ { "value": "び" },
+ { "value": "ぶ" },
+ { "value": "べ" },
+ { "value": "ぼ" },
+
+ { "value": "ぱ" },
+ { "value": "ぴ" },
+ { "value": "ぷ" },
+ { "value": "ぺ" },
+ { "value": "ぽ" },
+
+ { "value": "ま" },
+ { "value": "み" },
+ { "value": "む" },
+ { "value": "め" },
+ { "value": "も" },
+
+ { "value": "や" },
+ { "value": "ゆ" },
+ { "value": "よ" },
+
+ { "value": "ら" },
+ { "value": "り" },
+ { "value": "る" },
+ { "value": "れ" },
+ { "value": "ろ" },
+ 
+ { "value": "わ" }
+]
