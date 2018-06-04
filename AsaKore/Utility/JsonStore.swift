@@ -19,10 +19,10 @@ struct JsonStore {
         }
     }
     
-    struct Hiragana {
+    struct Initial {
         static func fetch() -> Data? {
             do {
-                return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Hiragana", ofType: "json")!))
+                return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Initial", ofType: "json")!))
             } catch {
                 return nil
             }

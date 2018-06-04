@@ -21,8 +21,8 @@ final class QuestionCell: UITableViewCell {
 }
 
 extension QuestionCell {
-    func apply(question: Question) {
-        initialLabel.text = "「\(question.initial)」から始まる"
-        questionLabel.text = "\(question.question)は？"
+    func apply(questionSet: (initial: Initial, question: Question)) {
+        initialLabel.text = "「\(questionSet.initial.value)」から始まる"
+        questionLabel.text = "\(questionSet.question.value)は？"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Hiragana.swift
+//  Initial.swift
 //  AsaKore
 //
 //  Created by 刈部拓未 on 2018/06/04.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Hiragana: Decodable {
+struct Initial: Decodable {
     let value: String
 }
 
-extension Hiragana {
-    static func decode(by data: Data) -> [Hiragana]? {
+extension Initial {
+    static func decode(by data: Data) -> [Initial]? {
         do {
-            return try JSONDecoder().decode([Hiragana].self, from: data)
+            return try JSONDecoder().decode([Initial].self, from: data)
         } catch {
             return nil
         }

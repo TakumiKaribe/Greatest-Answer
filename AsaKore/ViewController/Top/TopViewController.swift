@@ -12,7 +12,7 @@ import UIKit
 final class TopViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     private let viewModel = TopViewControllerViewModel()
-    private var questions: [Question] = []
+    private var questions: [(initial: Initial, question: Question)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +50,13 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        cell.apply(question: questions[indexPath.row])
+        cell.apply(questionSet: questions[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let questionViewController = QuestionViewController.instantiate()
-        questionViewController.apply(question: questions[indexPath.row])
+        questionViewController.apply(with: questions[indexPath.row].initial, questions[indexPath.row].question)
         navigationController?.pushViewController(questionViewController, animated: true)
     }
 }

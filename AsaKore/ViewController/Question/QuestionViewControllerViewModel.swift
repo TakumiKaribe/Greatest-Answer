@@ -16,11 +16,13 @@ protocol QuestionViewControllerViewModelDelegate: class {
 
 final class QuestionViewControllerViewModel {
     weak var delegate: QuestionViewControllerViewModelDelegate?
+    let initial: Initial
     let question: Question
     private var time = 60.0 { didSet { delegate?.questionViewControllerViewModel(self, didChange: time) } }
     private var timer: Timer? = nil
     
-    init(question: Question) {
+    init(with initial: Initial , _ question: Question) {
+        self.initial = initial
         self.question = question
     }
     

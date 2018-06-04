@@ -10,8 +10,7 @@ import Foundation
 
 struct Question: Decodable {
     let id: Int
-    let initial: String
-    let question: String
+    let value: String
 }
 
 extension Question {

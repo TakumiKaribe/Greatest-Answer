@@ -14,8 +14,8 @@
 		2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */; };
 		2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2420C2834600CCE95E /* JsonStore.swift */; };
 		2A10CB2F20C2D60A00CCE95E /* StoryBoardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2E20C2D60A00CCE95E /* StoryBoardInstantiatable.swift */; };
-		2A2F887020C54C9600C0B0D7 /* Hiragana.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A2F886F20C54C9600C0B0D7 /* Hiragana.json */; };
-		2A2F887220C54DE600C0B0D7 /* Hiragana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2F887120C54DE600C0B0D7 /* Hiragana.swift */; };
+		2A2F887020C54C9600C0B0D7 /* Initial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A2F886F20C54C9600C0B0D7 /* Initial.json */; };
+		2A2F887220C54DE600C0B0D7 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2F887120C54DE600C0B0D7 /* Initial.swift */; };
 		2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */; };
 		2A7BA6B820B46A7E00A7798D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B720B46A7E00A7798D /* Assets.xcassets */; };
 		2A7BA6BB20B46A7E00A7798D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B920B46A7E00A7798D /* LaunchScreen.storyboard */; };
@@ -45,8 +45,8 @@
 		2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewControllerViewModel.swift; sourceTree = "<group>"; };
 		2A10CB2420C2834600CCE95E /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
 		2A10CB2E20C2D60A00CCE95E /* StoryBoardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInstantiatable.swift; sourceTree = "<group>"; };
-		2A2F886F20C54C9600C0B0D7 /* Hiragana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hiragana.json; sourceTree = "<group>"; };
-		2A2F887120C54DE600C0B0D7 /* Hiragana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hiragana.swift; sourceTree = "<group>"; };
+		2A2F886F20C54C9600C0B0D7 /* Initial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial.json; sourceTree = "<group>"; };
+		2A2F887120C54DE600C0B0D7 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		2A7BA6AD20B46A7C00A7798D /* AsaKore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsaKore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7BA6B720B46A7E00A7798D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6D020B46C5100A7798D /* Questions.json */,
-				2A2F886F20C54C9600C0B0D7 /* Hiragana.json */,
+				2A2F886F20C54C9600C0B0D7 /* Initial.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6D320B46C5100A7798D /* Question.swift */,
-				2A2F887120C54DE600C0B0D7 /* Hiragana.swift */,
+				2A2F887120C54DE600C0B0D7 /* Initial.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				2A7BA6DA20B46DEE00A7798D /* QuestionViewController.storyboard in Resources */,
 				2A7BA6BB20B46A7E00A7798D /* LaunchScreen.storyboard in Resources */,
 				2A7BA6B820B46A7E00A7798D /* Assets.xcassets in Resources */,
-				2A2F887020C54C9600C0B0D7 /* Hiragana.json in Resources */,
+				2A2F887020C54C9600C0B0D7 /* Initial.json in Resources */,
 				2A10CB1720C27BB300CCE95E /* TopViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +317,7 @@
 				2A10CB1920C27CA900CCE95E /* QuestionCell.swift in Sources */,
 				2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */,
 				2A7BA6D520B46C5100A7798D /* QuestionViewControllerViewModel.swift in Sources */,
-				2A2F887220C54DE600C0B0D7 /* Hiragana.swift in Sources */,
+				2A2F887220C54DE600C0B0D7 /* Initial.swift in Sources */,
 				2A10CB1520C27B9200CCE95E /* TopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

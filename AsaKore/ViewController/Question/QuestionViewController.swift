@@ -24,8 +24,8 @@ class QuestionViewController: UIViewController {
         timeUpView.isHidden = true
         timeUpView.alpha = 0
         guard let viewModel = viewModel else { return }
-        initialLabel.text = "「\(viewModel.question.initial)」で始まる"
-        questionLabel.text = "\(viewModel.question.question)は？"
+        initialLabel.text = "「\(viewModel.initial.value)」で始まる"
+        questionLabel.text = "\(viewModel.question.value)は？"
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {
@@ -45,8 +45,8 @@ class QuestionViewController: UIViewController {
         // pop
     }
     
-    func apply(question: Question) {
-        viewModel = QuestionViewControllerViewModel(question: question)
+    func apply(with initial: Initial, _ question: Question) {
+        viewModel = QuestionViewControllerViewModel(with: initial, question)
     }
 }
 
