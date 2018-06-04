@@ -18,4 +18,14 @@ struct JsonStore {
             }
         }
     }
+    
+    struct Hiragana {
+        static func fetch() -> Data? {
+            do {
+                return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Hiragana", ofType: "json")!))
+            } catch {
+                return nil
+            }
+        }
+    }
 }
