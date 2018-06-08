@@ -29,6 +29,6 @@ extension Instantiatable where Self: UITableViewCell {
     
     static func dequeue(from tableView: UITableView, at indexPath: IndexPath) -> Self {
         let className = String(describing: self)
-        return tableView.dequeueReusableCell(withIdentifier: className, for: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: className, for: indexPath) as! Self
     }
 }
