@@ -20,6 +20,10 @@ struct AdMobSettings {
         return plist.object(forKey: "BannerId") as? String ?? ""
     }
     
+    static var bannerTestId: String {
+        return plist.object(forKey: "BannerTestId") as? String ?? ""
+    }
+    
     static var interstitialId: String {
         return plist.object(forKey: "InterstitialId") as? String ?? ""
     }

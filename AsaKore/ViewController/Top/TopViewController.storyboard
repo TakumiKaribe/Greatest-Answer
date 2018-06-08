@@ -31,7 +31,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbX-tR-CIS">
-                                <rect key="frame" x="16" y="551" width="343" height="44"/>
+                                <rect key="frame" x="16" y="549" width="343" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NoF-Kj-sfR"/>
                                 </constraints>
@@ -49,28 +49,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-by-ror" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dku-KW-aiH"/>
+                                    <constraint firstAttribute="width" constant="320" id="nWa-dY-BWf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="w7G-og-WO1" secondAttribute="trailing" constant="16" id="2ey-DU-BgC"/>
+                            <constraint firstItem="KOv-by-ror" firstAttribute="top" secondItem="RbX-tR-CIS" secondAttribute="bottom" constant="24" id="AKR-ga-5qc"/>
                             <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="RbX-tR-CIS" secondAttribute="trailing" constant="16" id="Iix-fb-DEG"/>
+                            <constraint firstItem="KOv-by-ror" firstAttribute="centerX" secondItem="ee2-01-OQg" secondAttribute="centerX" id="L6h-NB-siF"/>
                             <constraint firstItem="w7G-og-WO1" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="OWk-Mb-vXu"/>
                             <constraint firstItem="RbX-tR-CIS" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="TDE-BP-BLN"/>
-                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="bottom" secondItem="RbX-tR-CIS" secondAttribute="bottom" constant="72" id="YC7-df-kAC"/>
                             <constraint firstItem="7EH-h8-FgT" firstAttribute="centerY" secondItem="ee2-01-OQg" secondAttribute="centerY" id="bot-1Z-0Jy"/>
                             <constraint firstItem="w7G-og-WO1" firstAttribute="top" secondItem="ZJe-WN-h1F" secondAttribute="top" constant="72" id="e66-oU-Uyi"/>
+                            <constraint firstItem="ZJe-WN-h1F" firstAttribute="bottom" secondItem="KOv-by-ror" secondAttribute="bottom" id="ggo-8x-7o0"/>
                             <constraint firstItem="7EH-h8-FgT" firstAttribute="leading" secondItem="ZJe-WN-h1F" secondAttribute="leading" constant="16" id="oBo-VI-Juw"/>
                             <constraint firstItem="ZJe-WN-h1F" firstAttribute="trailing" secondItem="7EH-h8-FgT" secondAttribute="trailing" constant="16" id="t3c-Fi-Ev9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZJe-WN-h1F"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="KOv-by-ror" id="Jfw-fS-16r"/>
                         <outlet property="tableView" destination="7EH-h8-FgT" id="M0d-TJ-JWu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndY-6I-61j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="92"/>
+            <point key="canvasLocation" x="-63.200000000000003" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>
