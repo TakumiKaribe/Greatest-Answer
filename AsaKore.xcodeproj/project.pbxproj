@@ -13,7 +13,7 @@
 		2A10CB1B20C27CCA00CCE95E /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A10CB1A20C27CCA00CCE95E /* QuestionCell.xib */; };
 		2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */; };
 		2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2420C2834600CCE95E /* JsonStore.swift */; };
-		2A10CB2F20C2D60A00CCE95E /* StoryBoardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2E20C2D60A00CCE95E /* StoryBoardInstantiatable.swift */; };
+		2A10CB2F20C2D60A00CCE95E /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */; };
 		2A2F887020C54C9600C0B0D7 /* Initial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A2F886F20C54C9600C0B0D7 /* Initial.json */; };
 		2A2F887220C54DE600C0B0D7 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2F887120C54DE600C0B0D7 /* Initial.swift */; };
 		2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */; };
@@ -45,7 +45,7 @@
 		2A10CB1A20C27CCA00CCE95E /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 		2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewControllerViewModel.swift; sourceTree = "<group>"; };
 		2A10CB2420C2834600CCE95E /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
-		2A10CB2E20C2D60A00CCE95E /* StoryBoardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInstantiatable.swift; sourceTree = "<group>"; };
+		2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		2A2F886F20C54C9600C0B0D7 /* Initial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial.json; sourceTree = "<group>"; };
 		2A2F887120C54DE600C0B0D7 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		2A7BA6AD20B46A7C00A7798D /* AsaKore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsaKore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +158,7 @@
 		2A10CB2D20C2D5E900CCE95E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				2A10CB2E20C2D60A00CCE95E /* StoryBoardInstantiatable.swift */,
+				2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				2A7BA6D720B46C5100A7798D /* Question.swift in Sources */,
 				2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */,
 				2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */,
-				2A10CB2F20C2D60A00CCE95E /* StoryBoardInstantiatable.swift in Sources */,
+				2A10CB2F20C2D60A00CCE95E /* Instantiatable.swift in Sources */,
 				2A7BA6D620B46C5100A7798D /* QuestionViewController.swift in Sources */,
 				2A10CB1920C27CA900CCE95E /* QuestionCell.swift in Sources */,
 				2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */,
