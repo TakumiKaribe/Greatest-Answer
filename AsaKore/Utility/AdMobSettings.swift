@@ -29,6 +29,6 @@ struct AdMobSettings {
     }
     
     static var interstitialTestId: String {
-        return plist.object(forKey: "interstitialTestId") as? String ?? ""
+        return plist.object(forKey: "InterstitialTestId") as? String ?? ""
     }
 }

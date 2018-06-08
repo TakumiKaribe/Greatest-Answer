@@ -14,8 +14,12 @@ import TinyConstraints
 final class TopViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var bannerView: GADBannerView!
+    
+    private var interstitial: GADInterstitial!
     private let viewModel = TopViewControllerViewModel()
     private var questions: [(initial: Initial, question: Question)] = []
+    
+    private var didSelectCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,10 @@ final class TopViewController: UIViewController {
         bannerView.adUnitID = AdMobSettings.bannerTestId
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
+        interstitial = GADInterstitial(adUnitID: AdMobSettings.interstitialTestId)
+        interstitial.load(GADRequest())
+        interstitial.delegate = self
 
         questions = viewModel.fetchTripleQuestion()
         tableView.layer.borderColor = UIColor.lightGray.cgColor
@@ -50,8 +58,7 @@ extension TopViewController: GADBannerViewDelegate {
     }
     
     /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-                didFailToReceiveAdWithError error: GADRequestError) {
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
     
@@ -78,6 +85,42 @@ extension TopViewController: GADBannerViewDelegate {
     }
 }
 
+extension TopViewController: GADInterstitialDelegate {
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        print("interstitialWillPresentScreen")
+    }
+    
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialWillDismissScreen")
+    }
+    
+    /// Tells the delegate the interstitial had been animated off the screen.
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialDidDismissScreen")
+        interstitial = GADInterstitial(adUnitID: AdMobSettings.interstitialTestId)
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+    }
+    
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        print("interstitialWillLeaveApplication")
+    }
+}
+
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -95,6 +138,13 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if didSelectCount >= 5 {
+            interstitial.present(fromRootViewController: self)
+            didSelectCount = 0
+        } else {
+            didSelectCount += 1
+        }
+        
         let questionViewController = QuestionViewController.instantiate()
         questionViewController.apply(with: questions[indexPath.row].initial, questions[indexPath.row].question)
         navigationController?.pushViewController(questionViewController, animated: true)
