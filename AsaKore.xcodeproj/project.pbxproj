@@ -25,6 +25,7 @@
 		2A7BA6D620B46C5100A7798D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D220B46C5100A7798D /* QuestionViewController.swift */; };
 		2A7BA6D720B46C5100A7798D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D320B46C5100A7798D /* Question.swift */; };
 		2A7BA6DA20B46DEE00A7798D /* QuestionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D820B46DEE00A7798D /* QuestionViewController.storyboard */; };
+		2AE2E3DE20CA533B00DC8FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2E3DD20CA533B00DC8FD1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		2A7BA6D220B46C5100A7798D /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2A7BA6D320B46C5100A7798D /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		2A7BA6D920B46DEE00A7798D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuestionViewController.storyboard; sourceTree = "<group>"; };
+		2AE2E3DD20CA533B00DC8FD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6BC20B46A7E00A7798D /* Info.plist */,
+				2AE2E3DD20CA533B00DC8FD1 /* GoogleService-Info.plist */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7BA6D420B46C5100A7798D /* Questions.json in Resources */,
+				2AE2E3DE20CA533B00DC8FD1 /* GoogleService-Info.plist in Resources */,
 				2A10CB1B20C27CCA00CCE95E /* QuestionCell.xib in Resources */,
 				2A7BA6DA20B46DEE00A7798D /* QuestionViewController.storyboard in Resources */,
 				2A7BA6BB20B46A7E00A7798D /* LaunchScreen.storyboard in Resources */,
