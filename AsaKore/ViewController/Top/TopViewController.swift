@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
+import GoogleSignIn
 import TinyConstraints
 
-final class TopViewController: UIViewController {
+final class TopViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var bannerView: GADBannerView!
+    
+    private var signInButton: GIDSignInButton = GIDSignInButton()
     
     private var interstitial: GADInterstitial!
     private let viewModel = TopViewControllerViewModel()
@@ -23,6 +26,16 @@ final class TopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
+        view.addSubview(signInButton)
+        signInButton.height(24)
+        signInButton.width(44)
+        signInButton.centerXToSuperview()
+        signInButton.centerYToSuperview()
+        
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         bannerView.adUnitID = AdMobSettings.bannerTestId
