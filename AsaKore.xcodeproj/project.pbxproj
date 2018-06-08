@@ -83,6 +83,7 @@
 		2A10CB1E20C2813800CCE95E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2AE2E3DC20CA52FC00DC8FD1 /* Launch */,
 				2A10CB1F20C2814100CCE95E /* Top */,
 				2A10CB2620C28E4F00CCE95E /* Question */,
 			);
@@ -111,6 +112,7 @@
 		2A10CB2120C2818900CCE95E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2A7BA6B720B46A7E00A7798D /* Assets.xcassets */,
 				2A7BA6D020B46C5100A7798D /* Questions.json */,
 				2A2F886F20C54C9600C0B0D7 /* Initial.json */,
 			);
@@ -181,9 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
-				2A7BA6B920B46A7E00A7798D /* LaunchScreen.storyboard */,
-				2A7BA6BC20B46A7E00A7798D /* Info.plist */,
-				2A7BA6B720B46A7E00A7798D /* Assets.xcassets */,
+				2AE2E3DB20CA52DB00DC8FD1 /* Settings */,
 				2A10CB2120C2818900CCE95E /* Resource */,
 				2A10CB2320C2833800CCE95E /* Utility */,
 				2A10CB2D20C2D5E900CCE95E /* Protocol */,
@@ -202,6 +202,22 @@
 				2A7BA6C720B46A7E00A7798D /* Info.plist */,
 			);
 			path = AsaKoreTests;
+			sourceTree = "<group>";
+		};
+		2AE2E3DB20CA52DB00DC8FD1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2A7BA6BC20B46A7E00A7798D /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2AE2E3DC20CA52FC00DC8FD1 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2A7BA6B920B46A7E00A7798D /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
