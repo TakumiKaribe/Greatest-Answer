@@ -7,6 +7,7 @@ target 'AsaKore' do
 
   # Pods for AsaKore
   pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 
   target 'AsaKoreTests' do
     inherit! :search_paths
