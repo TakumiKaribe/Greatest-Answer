@@ -205,14 +205,15 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
-				2AE2E3DB20CA52DB00DC8FD1 /* Settings */,
-				2A10CB2120C2818900CCE95E /* Resource */,
-				2A10CB2320C2833800CCE95E /* Utility */,
 				2A10CB2D20C2D5E900CCE95E /* Protocol */,
 				2A10CB2A20C2D50900CCE95E /* Extension */,
 				2A10CB1E20C2813800CCE95E /* ViewController */,
 				2A10CB2220C2819500CCE95E /* Model */,
+				2AE2E3E620CA660100DC8FD1 /* View */,
 				2A10CB2020C2816700CCE95E /* Cell */,
+				2A10CB2320C2833800CCE95E /* Utility */,
+				2AE2E3DB20CA52DB00DC8FD1 /* Settings */,
+				2A10CB2120C2818900CCE95E /* Resource */,
 			);
 			path = AsaKore;
 			sourceTree = "<group>";
@@ -242,6 +243,13 @@
 				2A7BA6B920B46A7E00A7798D /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		2AE2E3E620CA660100DC8FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		565C30BE7DF9ACE66E524F1A /* Frameworks */ = {
