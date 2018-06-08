@@ -9,6 +9,8 @@ target 'AsaKore' do
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   pod 'Firebase/Invites'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
   target 'AsaKoreTests' do
     inherit! :search_paths
