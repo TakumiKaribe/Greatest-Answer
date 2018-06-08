@@ -12,12 +12,6 @@ import UIKit
 final class QuestionCell: UITableViewCell {
     @IBOutlet private weak var initialLabel: UILabel!
     @IBOutlet private weak var questionLabel: UILabel!
-    
-    static let height: CGFloat = 88
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }
 
 extension QuestionCell {

@@ -44,10 +44,6 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
         return questions.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return QuestionCell.height
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         cell.apply(questionSet: questions[indexPath.row])
