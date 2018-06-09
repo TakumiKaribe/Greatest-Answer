@@ -39,16 +39,37 @@ extension SignInViewController: GIDSignInDelegate {
                                                        accessToken: authentication.accessToken)
         
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if let _ = error {
-                return
-            }
-            
+            if let _ = error { return }
             print("signed in")
+            let controller = UIAlertController(title: "Send Invitation", message: nil, preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in self?.invitation() }))
+            self.present(controller, animated: true, completion: nil)
         }
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
+    }
+}
+
+extension SignInViewController: InviteDelegate {
+    func invitation() {
+        if let invite = Invites.inviteDialog() {
+            invite.setInviteDelegate(self)
+            
+            // NOTE: You must have the App Store ID set in your developer console project
+            // in order for invitations to successfully be sent.
+            
+            // A message hint for the dialog. Note this manifests differently depending on the
+            // received invitation type. For example, in an email invite this appears as the subject.
+            invite.setMessage("Try this out!\n -\(GIDSignIn.sharedInstance().currentUser.profile.name)")
+            // Title for the dialog, this is what the user sees before sending the invites.
+            invite.setTitle("Invites Example")
+            invite.setDeepLink("app_url")
+            invite.setCallToActionText("Install!")
+            invite.setCustomImage("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png")
+            invite.open()
+        }
     }
 }
