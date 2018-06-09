@@ -30,6 +30,7 @@
 		2AE2E3E420CA64DA00DC8FD1 /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */; };
 		2AE2E3ED20CB873B00DC8FD1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */; };
 		2AE2E3EF20CB875400DC8FD1 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */; };
+		2AE2E3F220CBA0A000DC8FD1 /* AppDelegate+GIDSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2E3F120CBA0A000DC8FD1 /* AppDelegate+GIDSignInDelegate.swift */; };
 		2E2B44C010341DEEABE51C82 /* Pods_AsaKoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */; };
 		C9E2A013932602EB17818DFC /* Pods_Greatest_AnswerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */; };
 		DB047B5826794FBA7F1BC18B /* Pods_Greatest_Answer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */; };
@@ -78,6 +79,7 @@
 		2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TinyConstraints.framework; path = Carthage/Build/iOS/TinyConstraints.framework; sourceTree = "<group>"; };
 		2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
+		2AE2E3F120CBA0A000DC8FD1 /* AppDelegate+GIDSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+GIDSignInDelegate.swift"; sourceTree = "<group>"; };
 		2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_AnswerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1139017F2A57CB47D1FED /* Pods-Greatest AnswerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest AnswerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest AnswerTests/Pods-Greatest AnswerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_Answer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +208,7 @@
 		2A7BA6AF20B46A7C00A7798D /* Greatest Answer */ = {
 			isa = PBXGroup;
 			children = (
-				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
+				2AE2E3F020CBA08400DC8FD1 /* AppDelegate */,
 				2A10CB2D20C2D5E900CCE95E /* Protocol */,
 				2A10CB1E20C2813800CCE95E /* ViewController */,
 				2A10CB2220C2819500CCE95E /* Model */,
@@ -243,6 +245,15 @@
 				2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		2AE2E3F020CBA08400DC8FD1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
+				2AE2E3F120CBA0A000DC8FD1 /* AppDelegate+GIDSignInDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		565C30BE7DF9ACE66E524F1A /* Frameworks */ = {
@@ -492,6 +503,7 @@
 				2A7BA6D720B46C5100A7798D /* Question.swift in Sources */,
 				2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */,
 				2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */,
+				2AE2E3F220CBA0A000DC8FD1 /* AppDelegate+GIDSignInDelegate.swift in Sources */,
 				2A10CB2F20C2D60A00CCE95E /* Instantiatable.swift in Sources */,
 				2A7BA6D620B46C5100A7798D /* QuestionViewController.swift in Sources */,
 				2A10CB1920C27CA900CCE95E /* QuestionCell.swift in Sources */,
