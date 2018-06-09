@@ -65,7 +65,10 @@ extension QuestionViewController: QuestionViewControllerViewModelDelegate {
         if random == 0 {
             let controller = UIAlertController(title: "ご利用ありがとうございます", message: "このアプリを他の方へ紹介しませんか？", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
-                self?.present(SignInViewController.instantiate(), animated: true, completion: nil)
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    return
+                }
+                self?.present(appDelegate.signInViewController, animated: true, completion: nil)
             }))
             controller.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(controller, animated: true, completion: nil)
