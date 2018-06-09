@@ -58,12 +58,12 @@
 		2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		2A2F886F20C54C9600C0B0D7 /* Initial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial.json; sourceTree = "<group>"; };
 		2A2F887120C54DE600C0B0D7 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
-		2A7BA6AD20B46A7C00A7798D /* AsaKore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsaKore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7BA6AD20B46A7C00A7798D /* Greatest Answer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greatest Answer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7BA6B720B46A7E00A7798D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A7BA6BA20B46A7E00A7798D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A7BA6BC20B46A7E00A7798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A7BA6C120B46A7E00A7798D /* AsaKoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsaKoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7BA6C120B46A7E00A7798D /* Greatest AnswerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Greatest AnswerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7BA6C520B46A7E00A7798D /* AsaKoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsaKoreTests.swift; sourceTree = "<group>"; };
 		2A7BA6C720B46A7E00A7798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7BA6D020B46C5100A7798D /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		2A7BA6A420B46A7C00A7798D = {
 			isa = PBXGroup;
 			children = (
-				2A7BA6AF20B46A7C00A7798D /* AsaKore */,
+				2A7BA6AF20B46A7C00A7798D /* Greatest Answer */,
 				2A7BA6C420B46A7E00A7798D /* AsaKoreTests */,
 				2A7BA6AE20B46A7C00A7798D /* Products */,
 				832444F4E822C66B098FB1E5 /* Pods */,
@@ -200,13 +200,13 @@
 		2A7BA6AE20B46A7C00A7798D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A7BA6AD20B46A7C00A7798D /* AsaKore.app */,
-				2A7BA6C120B46A7E00A7798D /* AsaKoreTests.xctest */,
+				2A7BA6AD20B46A7C00A7798D /* Greatest Answer.app */,
+				2A7BA6C120B46A7E00A7798D /* Greatest AnswerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A7BA6AF20B46A7C00A7798D /* AsaKore */ = {
+		2A7BA6AF20B46A7C00A7798D /* Greatest Answer */ = {
 			isa = PBXGroup;
 			children = (
 				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
@@ -220,7 +220,7 @@
 				2AE2E3DB20CA52DB00DC8FD1 /* Settings */,
 				2A10CB2120C2818900CCE95E /* Resource */,
 			);
-			path = AsaKore;
+			path = "Greatest Answer";
 			sourceTree = "<group>";
 		};
 		2A7BA6C420B46A7E00A7798D /* AsaKoreTests */ = {
@@ -290,9 +290,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A7BA6AC20B46A7C00A7798D /* AsaKore */ = {
+		2A7BA6AC20B46A7C00A7798D /* Greatest Answer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A7BA6CA20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "AsaKore" */;
+			buildConfigurationList = 2A7BA6CA20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "Greatest Answer" */;
 			buildPhases = (
 				9D73D4F52CD3667B1FE76057 /* [CP] Check Pods Manifest.lock */,
 				2A7BA6A920B46A7C00A7798D /* Sources */,
@@ -306,14 +306,14 @@
 			);
 			dependencies = (
 			);
-			name = AsaKore;
+			name = "Greatest Answer";
 			productName = AsaKore;
-			productReference = 2A7BA6AD20B46A7C00A7798D /* AsaKore.app */;
+			productReference = 2A7BA6AD20B46A7C00A7798D /* Greatest Answer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A7BA6C020B46A7E00A7798D /* AsaKoreTests */ = {
+		2A7BA6C020B46A7E00A7798D /* Greatest AnswerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A7BA6CD20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "AsaKoreTests" */;
+			buildConfigurationList = 2A7BA6CD20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "Greatest AnswerTests" */;
 			buildPhases = (
 				C45A1E75434258F559DE8F15 /* [CP] Check Pods Manifest.lock */,
 				2A7BA6BD20B46A7E00A7798D /* Sources */,
@@ -325,9 +325,9 @@
 			dependencies = (
 				2A7BA6C320B46A7E00A7798D /* PBXTargetDependency */,
 			);
-			name = AsaKoreTests;
+			name = "Greatest AnswerTests";
 			productName = AsaKoreTests;
-			productReference = 2A7BA6C120B46A7E00A7798D /* AsaKoreTests.xctest */;
+			productReference = 2A7BA6C120B46A7E00A7798D /* Greatest AnswerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A7BA6A820B46A7C00A7798D /* Build configuration list for PBXProject "AsaKore" */;
+			buildConfigurationList = 2A7BA6A820B46A7C00A7798D /* Build configuration list for PBXProject "Greatest Answer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -362,8 +362,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A7BA6AC20B46A7C00A7798D /* AsaKore */,
-				2A7BA6C020B46A7E00A7798D /* AsaKoreTests */,
+				2A7BA6AC20B46A7C00A7798D /* Greatest Answer */,
+				2A7BA6C020B46A7E00A7798D /* Greatest AnswerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -532,7 +532,7 @@
 /* Begin PBXTargetDependency section */
 		2A7BA6C320B46A7E00A7798D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A7BA6AC20B46A7C00A7798D /* AsaKore */;
+			target = 2A7BA6AC20B46A7C00A7798D /* Greatest Answer */;
 			targetProxy = 2A7BA6C220B46A7E00A7798D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -682,12 +682,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = AsaKore/Settings/Info.plist;
+				INFOPLIST_FILE = "Greatest Answer/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.AsaKore";
+				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.Greatest-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -705,12 +705,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = AsaKore/Settings/Info.plist;
+				INFOPLIST_FILE = "Greatest Answer/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.AsaKore";
+				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.Greatest-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -735,7 +735,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsaKore.app/AsaKore";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greatest Answer.app/Greatest Answer";
 			};
 			name = Debug;
 		};
@@ -757,14 +757,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsaKore.app/AsaKore";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greatest Answer.app/Greatest Answer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A7BA6A820B46A7C00A7798D /* Build configuration list for PBXProject "AsaKore" */ = {
+		2A7BA6A820B46A7C00A7798D /* Build configuration list for PBXProject "Greatest Answer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A7BA6C820B46A7E00A7798D /* Debug */,
@@ -773,7 +773,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A7BA6CA20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "AsaKore" */ = {
+		2A7BA6CA20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "Greatest Answer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A7BA6CB20B46A7E00A7798D /* Debug */,
@@ -782,7 +782,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A7BA6CD20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "AsaKoreTests" */ = {
+		2A7BA6CD20B46A7E00A7798D /* Build configuration list for PBXNativeTarget "Greatest AnswerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A7BA6CE20B46A7E00A7798D /* Debug */,
