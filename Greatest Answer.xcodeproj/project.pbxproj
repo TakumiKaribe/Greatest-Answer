@@ -19,7 +19,6 @@
 		2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */; };
 		2A7BA6B820B46A7E00A7798D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B720B46A7E00A7798D /* Assets.xcassets */; };
 		2A7BA6BB20B46A7E00A7798D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B920B46A7E00A7798D /* LaunchScreen.storyboard */; };
-		2A7BA6C620B46A7E00A7798D /* AsaKoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6C520B46A7E00A7798D /* AsaKoreTests.swift */; };
 		2A7BA6D420B46C5100A7798D /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D020B46C5100A7798D /* Questions.json */; };
 		2A7BA6D520B46C5100A7798D /* QuestionViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D120B46C5100A7798D /* QuestionViewControllerViewModel.swift */; };
 		2A7BA6D620B46C5100A7798D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6D220B46C5100A7798D /* QuestionViewController.swift */; };
@@ -33,6 +32,8 @@
 		2AE2E3EF20CB875400DC8FD1 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */; };
 		2E2B44C010341DEEABE51C82 /* Pods_AsaKoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */; };
 		76E25C9927314627C04B8925 /* Pods_AsaKore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BCE7CD563392C237EBC0 /* Pods_AsaKore.framework */; };
+		C9E2A013932602EB17818DFC /* Pods_Greatest_AnswerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */; };
+		DB047B5826794FBA7F1BC18B /* Pods_Greatest_Answer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006DAD1BF4A0DADCB2CBD885 /* Pods-Greatest Answer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest Answer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer.debug.xcconfig"; sourceTree = "<group>"; };
+		05102E4977AFE1DD4B144626 /* Pods-Greatest AnswerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest AnswerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest AnswerTests/Pods-Greatest AnswerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0B955D9657F11012B73300F6 /* Pods-AsaKoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsaKoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsaKoreTests/Pods-AsaKoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		0BBD205FE53CC26129D19528 /* Pods-AsaKoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsaKoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsaKoreTests/Pods-AsaKoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		147C19E178C303AAB10E2C67 /* Pods-AsaKore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsaKore.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore.release.xcconfig"; sourceTree = "<group>"; };
+		165DA887363F6E395D4F997D /* Pods-Greatest Answer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest Answer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer.release.xcconfig"; sourceTree = "<group>"; };
 		2A10CB1420C27B9200CCE95E /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		2A10CB1620C27BB300CCE95E /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
 		2A10CB1820C27CA900CCE95E /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
@@ -64,8 +68,6 @@
 		2A7BA6BA20B46A7E00A7798D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A7BA6BC20B46A7E00A7798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7BA6C120B46A7E00A7798D /* Greatest AnswerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Greatest AnswerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A7BA6C520B46A7E00A7798D /* AsaKoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsaKoreTests.swift; sourceTree = "<group>"; };
-		2A7BA6C720B46A7E00A7798D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7BA6D020B46C5100A7798D /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		2A7BA6D120B46C5100A7798D /* QuestionViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerViewModel.swift; sourceTree = "<group>"; };
 		2A7BA6D220B46C5100A7798D /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,9 @@
 		2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TinyConstraints.framework; path = Carthage/Build/iOS/TinyConstraints.framework; sourceTree = "<group>"; };
 		2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
+		2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_AnswerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1139017F2A57CB47D1FED /* Pods-Greatest AnswerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest AnswerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest AnswerTests/Pods-Greatest AnswerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_Answer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsaKoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAE0A3BF8F46503E3F7B3CE /* Pods-AsaKore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsaKore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF1BCE7CD563392C237EBC0 /* Pods_AsaKore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsaKore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +94,7 @@
 			files = (
 				2AE2E3E420CA64DA00DC8FD1 /* TinyConstraints.framework in Frameworks */,
 				76E25C9927314627C04B8925 /* Pods_AsaKore.framework in Frameworks */,
+				DB047B5826794FBA7F1BC18B /* Pods_Greatest_Answer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2B44C010341DEEABE51C82 /* Pods_AsaKoreTests.framework in Frameworks */,
+				C9E2A013932602EB17818DFC /* Pods_Greatest_AnswerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,13 +178,6 @@
 			path = Question;
 			sourceTree = "<group>";
 		};
-		2A10CB2A20C2D50900CCE95E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		2A10CB2D20C2D5E900CCE95E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6AF20B46A7C00A7798D /* Greatest Answer */,
-				2A7BA6C420B46A7E00A7798D /* GreatestAnswerTests */,
 				2A7BA6AE20B46A7C00A7798D /* Products */,
 				832444F4E822C66B098FB1E5 /* Pods */,
 				565C30BE7DF9ACE66E524F1A /* Frameworks */,
@@ -211,25 +210,14 @@
 			children = (
 				2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */,
 				2A10CB2D20C2D5E900CCE95E /* Protocol */,
-				2A10CB2A20C2D50900CCE95E /* Extension */,
 				2A10CB1E20C2813800CCE95E /* ViewController */,
 				2A10CB2220C2819500CCE95E /* Model */,
-				2AE2E3E620CA660100DC8FD1 /* View */,
 				2A10CB2020C2816700CCE95E /* Cell */,
 				2A10CB2320C2833800CCE95E /* Utility */,
 				2AE2E3DB20CA52DB00DC8FD1 /* Settings */,
 				2A10CB2120C2818900CCE95E /* Resource */,
 			);
 			path = "Greatest Answer";
-			sourceTree = "<group>";
-		};
-		2A7BA6C420B46A7E00A7798D /* GreatestAnswerTests */ = {
-			isa = PBXGroup;
-			children = (
-				2A7BA6C520B46A7E00A7798D /* AsaKoreTests.swift */,
-				2A7BA6C720B46A7E00A7798D /* Info.plist */,
-			);
-			path = GreatestAnswerTests;
 			sourceTree = "<group>";
 		};
 		2AE2E3DB20CA52DB00DC8FD1 /* Settings */ = {
@@ -250,13 +238,6 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
-		2AE2E3E620CA660100DC8FD1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2AE2E3EB20CB86E300DC8FD1 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +253,8 @@
 				2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */,
 				CEF1BCE7CD563392C237EBC0 /* Pods_AsaKore.framework */,
 				7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */,
+				6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */,
+				2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +266,10 @@
 				147C19E178C303AAB10E2C67 /* Pods-AsaKore.release.xcconfig */,
 				0BBD205FE53CC26129D19528 /* Pods-AsaKoreTests.debug.xcconfig */,
 				0B955D9657F11012B73300F6 /* Pods-AsaKoreTests.release.xcconfig */,
+				006DAD1BF4A0DADCB2CBD885 /* Pods-Greatest Answer.debug.xcconfig */,
+				165DA887363F6E395D4F997D /* Pods-Greatest Answer.release.xcconfig */,
+				38B1139017F2A57CB47D1FED /* Pods-Greatest AnswerTests.debug.xcconfig */,
+				05102E4977AFE1DD4B144626 /* Pods-Greatest AnswerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -402,7 +389,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer-resources.sh",
 				"${PODS_ROOT}/FirebaseInvites/Resources/GINInviteResources.bundle",
 				"${PODS_ROOT}/FirebaseInvites/Resources/GPPACLPickerResources.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
@@ -415,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2AE2E3E520CA64EE00DC8FD1 /* Run Carthage Script */ = {
@@ -444,7 +431,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AsaKore-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Greatest Answer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -462,7 +449,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AsaKoreTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Greatest AnswerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -475,7 +462,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
@@ -494,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsaKore/Pods-AsaKore-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Greatest Answer/Pods-Greatest Answer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -523,7 +510,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7BA6C620B46A7E00A7798D /* AsaKoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +659,7 @@
 		};
 		2A7BA6CB20B46A7E00A7798D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAAE0A3BF8F46503E3F7B3CE /* Pods-AsaKore.debug.xcconfig */;
+			baseConfigurationReference = 006DAD1BF4A0DADCB2CBD885 /* Pods-Greatest Answer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -696,7 +682,7 @@
 		};
 		2A7BA6CC20B46A7E00A7798D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 147C19E178C303AAB10E2C67 /* Pods-AsaKore.release.xcconfig */;
+			baseConfigurationReference = 165DA887363F6E395D4F997D /* Pods-Greatest Answer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -719,7 +705,7 @@
 		};
 		2A7BA6CE20B46A7E00A7798D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BBD205FE53CC26129D19528 /* Pods-AsaKoreTests.debug.xcconfig */;
+			baseConfigurationReference = 38B1139017F2A57CB47D1FED /* Pods-Greatest AnswerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -741,7 +727,7 @@
 		};
 		2A7BA6CF20B46A7E00A7798D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B955D9657F11012B73300F6 /* Pods-AsaKoreTests.release.xcconfig */;
+			baseConfigurationReference = 05102E4977AFE1DD4B144626 /* Pods-Greatest AnswerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
