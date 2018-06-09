@@ -22,4 +22,8 @@ final class SignInViewController: UIViewController, GIDSignInUIDelegate {
         signInButton.centerXToSuperview()
         signInButton.centerYToSuperview()
     }
+    
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
