@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7BA6AF20B46A7C00A7798D /* Greatest Answer */,
-				2A7BA6C420B46A7E00A7798D /* AsaKoreTests */,
+				2A7BA6C420B46A7E00A7798D /* GreatestAnswerTests */,
 				2A7BA6AE20B46A7C00A7798D /* Products */,
 				832444F4E822C66B098FB1E5 /* Pods */,
 				565C30BE7DF9ACE66E524F1A /* Frameworks */,
@@ -223,13 +223,13 @@
 			path = "Greatest Answer";
 			sourceTree = "<group>";
 		};
-		2A7BA6C420B46A7E00A7798D /* AsaKoreTests */ = {
+		2A7BA6C420B46A7E00A7798D /* GreatestAnswerTests */ = {
 			isa = PBXGroup;
 			children = (
 				2A7BA6C520B46A7E00A7798D /* AsaKoreTests.swift */,
 				2A7BA6C720B46A7E00A7798D /* Info.plist */,
 			);
-			path = AsaKoreTests;
+			path = GreatestAnswerTests;
 			sourceTree = "<group>";
 		};
 		2AE2E3DB20CA52DB00DC8FD1 /* Settings */ = {
