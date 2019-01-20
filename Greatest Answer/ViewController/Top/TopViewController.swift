@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
-import GoogleSignIn
 import TinyConstraints
 
 final class TopViewController: UIViewController {
@@ -139,12 +138,10 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if didSelectCount >= 5 {
+        if didSelectCount % 5 >= 4 {
             interstitial.present(fromRootViewController: self)
-            didSelectCount = 0
-        } else {
-            didSelectCount += 1
         }
+        didSelectCount += 1
         
         let questionViewController = QuestionViewController.instantiate()
         questionViewController.apply(with: questions[indexPath.row].initial, questions[indexPath.row].question)

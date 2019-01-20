@@ -20,28 +20,26 @@ final class TopViewControllerViewModel {
 // MARK: - Extension
 extension TopViewControllerViewModel {
     func fetchTripleQuestion() -> [(Initial, Question)] {
-        var rtn: [(Initial, Question)] = []
+        var ret: [(Initial, Question)] = []
         (0...2).forEach { _ in 
             let randomQ = Int(arc4random_uniform(UInt32(questions.count)))
             let randomH = Int(arc4random_uniform(UInt32(initials.count)))
             let question = (initials[randomH], questions[randomQ])
-            rtn.append(question)
+            ret.append(question)
         }
-        return rtn
+        return ret
     }
 }
 
 // MARK: - Private Extension
 private extension TopViewControllerViewModel {
     func setUpQuestions() {
-        guard let data = JsonStore.Question.fetch() else { return }
-        guard let questions = Question.decode(by: data) else { return }
+        guard let questions = Question.decode(by: JsonStore.Question.fetch()) else { return }
         self.questions = questions
     }
     
     func setUpHiraganas() {
-        guard let data = JsonStore.Initial.fetch() else { return }
-        guard let initials = Initial.decode(by: data) else { return }
+        guard let initials = Initial.decode(by: JsonStore.Initial.fetch()) else { return }
         self.initials = initials
     }
 }

@@ -22,8 +22,7 @@ profile
 Pods/*
 
 #Carthage
-Carthage/Checkouts
-!Carthage/Build
+Carthage/*
 
 #Firebase
 GoogleService-Info.plist

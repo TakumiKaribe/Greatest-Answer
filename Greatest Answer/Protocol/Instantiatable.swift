@@ -32,3 +32,16 @@ extension Instantiatable where Self: UITableViewCell {
         return tableView.dequeueReusableCell(withIdentifier: className, for: indexPath) as! Self
     }
 }
+
+extension UITableView {
+    func register<T: UITableViewCell>(_ cellType: T.Type) {
+        let className = String(describing: cellType)
+        let nib = UINib(nibName: className, bundle: nil)
+        register(nib, forCellReuseIdentifier: className)
+    }
+    
+    func dequeue<T: UITableViewCell>(_ cellType: T.Type, indexPath: IndexPath) -> T {
+        let className = String(describing: cellType)
+        return dequeueReusableCell(withIdentifier: className, for: indexPath) as! T
+    }
+}

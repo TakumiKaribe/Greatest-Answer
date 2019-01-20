@@ -28,8 +28,6 @@
 		2AE2E3E020CA5E7600DC8FD1 /* AdMobSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2E3DF20CA5E7600DC8FD1 /* AdMobSettings.plist */; };
 		2AE2E3E220CA5EE700DC8FD1 /* AdMobSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2E3E120CA5EE700DC8FD1 /* AdMobSettings.swift */; };
 		2AE2E3E420CA64DA00DC8FD1 /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */; };
-		2AE2E3ED20CB873B00DC8FD1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */; };
-		2AE2E3EF20CB875400DC8FD1 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */; };
 		2E2B44C010341DEEABE51C82 /* Pods_AsaKoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */; };
 		C9E2A013932602EB17818DFC /* Pods_Greatest_AnswerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */; };
 		DB047B5826794FBA7F1BC18B /* Pods_Greatest_Answer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */; };
@@ -76,8 +74,6 @@
 		2AE2E3DF20CA5E7600DC8FD1 /* AdMobSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AdMobSettings.plist; sourceTree = "<group>"; };
 		2AE2E3E120CA5EE700DC8FD1 /* AdMobSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobSettings.swift; sourceTree = "<group>"; };
 		2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TinyConstraints.framework; path = Carthage/Build/iOS/TinyConstraints.framework; sourceTree = "<group>"; };
-		2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
 		2B66985836A703DA6DC40721 /* Pods_Greatest_AnswerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_AnswerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1139017F2A57CB47D1FED /* Pods-Greatest AnswerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greatest AnswerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greatest AnswerTests/Pods-Greatest AnswerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6403C8E13F750542DECF4617 /* Pods_Greatest_Answer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greatest_Answer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +107,6 @@
 		2A10CB1E20C2813800CCE95E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2AE2E3EB20CB86E300DC8FD1 /* SignIn */,
 				2AE2E3DC20CA52FC00DC8FD1 /* Launch */,
 				2A10CB1F20C2814100CCE95E /* Top */,
 				2A10CB2620C28E4F00CCE95E /* Question */,
@@ -236,15 +231,6 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
-		2AE2E3EB20CB86E300DC8FD1 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				2AE2E3EC20CB873B00DC8FD1 /* SignInViewController.swift */,
-				2AE2E3EE20CB875400DC8FD1 /* SignInViewController.storyboard */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
 		2AE2E3F020CBA08400DC8FD1 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7BA6D420B46C5100A7798D /* Questions.json in Resources */,
-				2AE2E3EF20CB875400DC8FD1 /* SignInViewController.storyboard in Resources */,
 				2AE2E3DE20CA533B00DC8FD1 /* GoogleService-Info.plist in Resources */,
 				2A10CB1B20C27CCA00CCE95E /* QuestionCell.xib in Resources */,
 				2AE2E3E020CA5E7600DC8FD1 /* AdMobSettings.plist in Resources */,
@@ -505,7 +490,6 @@
 				2A10CB1920C27CA900CCE95E /* QuestionCell.swift in Sources */,
 				2AE2E3E220CA5EE700DC8FD1 /* AdMobSettings.swift in Sources */,
 				2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */,
-				2AE2E3ED20CB873B00DC8FD1 /* SignInViewController.swift in Sources */,
 				2A7BA6D520B46C5100A7798D /* QuestionViewControllerViewModel.swift in Sources */,
 				2A2F887220C54DE600C0B0D7 /* Initial.swift in Sources */,
 				2A10CB1520C27B9200CCE95E /* TopViewController.swift in Sources */,
@@ -681,7 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.Greatest-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -704,7 +688,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "takumi-karibe.Greatest-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
