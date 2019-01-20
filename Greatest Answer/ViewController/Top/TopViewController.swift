@@ -36,7 +36,7 @@ final class TopViewController: UIViewController {
         questions = viewModel.fetchTripleQuestion()
         tableView.layer.borderColor = UIColor.lightGray.cgColor
         tableView.layer.borderWidth = 1
-        QuestionCell.registered(in: tableView)
+        tableView.register(QuestionCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,7 +132,7 @@ extension TopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = QuestionCell.dequeue(from: tableView, at: indexPath)
+        let cell = tableView.dequeue(QuestionCell.self, indexPath: indexPath)
         cell.apply(questionSet: questions[indexPath.row])
         return cell
     }

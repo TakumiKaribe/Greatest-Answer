@@ -19,20 +19,6 @@ extension Instantiatable where Self: UIViewController {
     }
 }
 
-extension UITableViewCell: Instantiatable {}
-extension Instantiatable where Self: UITableViewCell {
-    static func registered(in tableView: UITableView) {
-        let className = String(describing: self)
-        let nib = UINib(nibName: className, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: className)
-    }
-    
-    static func dequeue(from tableView: UITableView, at indexPath: IndexPath) -> Self {
-        let className = String(describing: self)
-        return tableView.dequeueReusableCell(withIdentifier: className, for: indexPath) as! Self
-    }
-}
-
 extension UITableView {
     func register<T: UITableViewCell>(_ cellType: T.Type) {
         let className = String(describing: cellType)
