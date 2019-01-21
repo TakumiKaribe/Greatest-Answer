@@ -29,6 +29,10 @@ extension TopViewControllerViewModel {
         }
         return ret
     }
+    
+    func addRealm() {
+        questions.forEach { $0.add() }
+    }
 }
 
 // MARK: - Private Extension

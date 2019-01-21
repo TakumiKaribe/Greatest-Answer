@@ -43,11 +43,16 @@ final class TopViewController: UIViewController {
         super.viewWillAppear(animated)
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.addRealm()
     }
     
     @IBAction func didTapChangeQuestionButton(_ sender: Any) {
         questions = viewModel.fetchTripleQuestion()
         tableView.reloadData()
+    }
+    @IBAction func didTapTransitionAllQuestionsButton(_ sender: Any) {
+        let vc = AllQuestionsViewController.instantiate()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

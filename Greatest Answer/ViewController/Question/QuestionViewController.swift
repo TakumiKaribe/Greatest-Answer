@@ -25,7 +25,7 @@ class QuestionViewController: UIViewController {
         timeUpView.alpha = 0
         guard let viewModel = viewModel else { return }
         initialLabel.text = "「\(viewModel.initial.value)」で始まる"
-        questionLabel.text = "\(viewModel.question.value)は？"
+        questionLabel.text = "\(viewModel.question.statement)は？"
     }
     
     @IBAction func didTapStartButton(_ sender: Any) {

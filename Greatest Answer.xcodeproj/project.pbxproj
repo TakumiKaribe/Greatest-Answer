@@ -14,6 +14,10 @@
 		2A10CB1D20C2812A00CCE95E /* TopViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */; };
 		2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2420C2834600CCE95E /* JsonStore.swift */; };
 		2A10CB2F20C2D60A00CCE95E /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */; };
+		2A2D8C2221F5820E00BD3344 /* AllQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D8C2121F5820E00BD3344 /* AllQuestionsViewController.swift */; };
+		2A2D8C2421F5822D00BD3344 /* AllQuestionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2D8C2321F5822D00BD3344 /* AllQuestionsViewController.storyboard */; };
+		2A2D8C2721F5872D00BD3344 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D8C2521F5872D00BD3344 /* Realm.framework */; };
+		2A2D8C2821F5872D00BD3344 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D8C2621F5872D00BD3344 /* RealmSwift.framework */; };
 		2A2F887020C54C9600C0B0D7 /* Initial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A2F886F20C54C9600C0B0D7 /* Initial.json */; };
 		2A2F887220C54DE600C0B0D7 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2F887120C54DE600C0B0D7 /* Initial.swift */; };
 		2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BA6B020B46A7C00A7798D /* AppDelegate.swift */; };
@@ -57,6 +61,10 @@
 		2A10CB1C20C2812A00CCE95E /* TopViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewControllerViewModel.swift; sourceTree = "<group>"; };
 		2A10CB2420C2834600CCE95E /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
 		2A10CB2E20C2D60A00CCE95E /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		2A2D8C2121F5820E00BD3344 /* AllQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionsViewController.swift; sourceTree = "<group>"; };
+		2A2D8C2321F5822D00BD3344 /* AllQuestionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllQuestionsViewController.storyboard; sourceTree = "<group>"; };
+		2A2D8C2521F5872D00BD3344 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		2A2D8C2621F5872D00BD3344 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		2A2F886F20C54C9600C0B0D7 /* Initial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial.json; sourceTree = "<group>"; };
 		2A2F887120C54DE600C0B0D7 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		2A7BA6AD20B46A7C00A7798D /* Greatest Answer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greatest Answer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2D8C2721F5872D00BD3344 /* Realm.framework in Frameworks */,
+				2A2D8C2821F5872D00BD3344 /* RealmSwift.framework in Frameworks */,
 				2AE2E3E420CA64DA00DC8FD1 /* TinyConstraints.framework in Frameworks */,
 				DB047B5826794FBA7F1BC18B /* Pods_Greatest_Answer.framework in Frameworks */,
 			);
@@ -107,6 +117,7 @@
 		2A10CB1E20C2813800CCE95E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2A2D8C2021F581F400BD3344 /* AllQuestions */,
 				2AE2E3DC20CA52FC00DC8FD1 /* Launch */,
 				2A10CB1F20C2814100CCE95E /* Top */,
 				2A10CB2620C28E4F00CCE95E /* Question */,
@@ -179,6 +190,15 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		2A2D8C2021F581F400BD3344 /* AllQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				2A2D8C2121F5820E00BD3344 /* AllQuestionsViewController.swift */,
+				2A2D8C2321F5822D00BD3344 /* AllQuestionsViewController.storyboard */,
+			);
+			path = AllQuestions;
+			sourceTree = "<group>";
+		};
 		2A7BA6A420B46A7C00A7798D = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +262,8 @@
 		565C30BE7DF9ACE66E524F1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A2D8C2521F5872D00BD3344 /* Realm.framework */,
+				2A2D8C2621F5872D00BD3344 /* RealmSwift.framework */,
 				2AE2E3E320CA64DA00DC8FD1 /* TinyConstraints.framework */,
 				CEF1BCE7CD563392C237EBC0 /* Pods_AsaKore.framework */,
 				7B0D8104EFB725F208CE261D /* Pods_AsaKoreTests.framework */,
@@ -355,6 +377,7 @@
 				2A7BA6D420B46C5100A7798D /* Questions.json in Resources */,
 				2AE2E3DE20CA533B00DC8FD1 /* GoogleService-Info.plist in Resources */,
 				2A10CB1B20C27CCA00CCE95E /* QuestionCell.xib in Resources */,
+				2A2D8C2421F5822D00BD3344 /* AllQuestionsViewController.storyboard in Resources */,
 				2AE2E3E020CA5E7600DC8FD1 /* AdMobSettings.plist in Resources */,
 				2A7BA6DA20B46DEE00A7798D /* QuestionViewController.storyboard in Resources */,
 				2A7BA6BB20B46A7E00A7798D /* LaunchScreen.storyboard in Resources */,
@@ -403,6 +426,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 			);
 			name = "Run Carthage Script";
 			outputPaths = (
@@ -486,6 +511,7 @@
 				2A10CB2520C2834600CCE95E /* JsonStore.swift in Sources */,
 				2A7BA6B120B46A7C00A7798D /* AppDelegate.swift in Sources */,
 				2A10CB2F20C2D60A00CCE95E /* Instantiatable.swift in Sources */,
+				2A2D8C2221F5820E00BD3344 /* AllQuestionsViewController.swift in Sources */,
 				2A7BA6D620B46C5100A7798D /* QuestionViewController.swift in Sources */,
 				2A10CB1920C27CA900CCE95E /* QuestionCell.swift in Sources */,
 				2AE2E3E220CA5EE700DC8FD1 /* AdMobSettings.swift in Sources */,

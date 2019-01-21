@@ -17,6 +17,6 @@ final class QuestionCell: UITableViewCell {
 extension QuestionCell {
     func apply(questionSet: (initial: Initial, question: Question)) {
         initialLabel.text = "「\(questionSet.initial.value)」から始まる"
-        questionLabel.text = "\(questionSet.question.value)は？"
+        questionLabel.text = "\(questionSet.question.statement)は？"
     }
 }

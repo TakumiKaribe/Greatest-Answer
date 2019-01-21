@@ -7,10 +7,35 @@
 //
 
 import Foundation
+import RealmSwift
+import Realm
 
 struct Question: Decodable {
     let id: Int
-    let value: String
+    let statement: String
+    
+    private func toRealmObject() -> QuestionObject {
+        let questionObject = QuestionObject()
+        questionObject.id = RealmOptional<Int>(id)
+        questionObject.statement = statement
+        return questionObject
+    }
+    
+    func add() {
+        let obj = toRealmObject()
+        let realm = try! Realm()
+        realm.beginWrite()
+        try! realm.write {
+            realm.add(obj)
+        }
+        try! realm.commitWrite()
+    }
+    
+    static func fetchAll() -> [Question] {
+        let realm = try! Realm()
+        let results = realm.objects(QuestionObject.self)
+        return results.map { $0.toObject() }
+    }
 }
 
 extension Question {
@@ -20,5 +45,17 @@ extension Question {
         } catch {
             return nil
         }
+    }
+}
+
+final class QuestionObject: Object {
+    var id = RealmOptional<Int>()
+    @objc dynamic var statement: String?
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    func toObject() -> Question {
+        return Question(id: id.value ?? 0, statement: statement ?? "no statement")
     }
 }
