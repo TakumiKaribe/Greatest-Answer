@@ -2,8 +2,8 @@
 //  AdMobSettings.swift
 //  AsaKore
 //
-//  Created by 刈部拓未 on 2018/06/08.
-//  Copyright © 2018年 刈部拓未. All rights reserved.
+//  Created by Takumi Karibe on 2018/06/08.
+//  Copyright © 2018年 Takumi Karibe. All rights reserved.
 //
 
 import Foundation

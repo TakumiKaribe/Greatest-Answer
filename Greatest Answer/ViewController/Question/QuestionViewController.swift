@@ -2,8 +2,8 @@
 //  QuestionViewController.swift
 //  ThisIsTheCorrectAnswerUntilMorning
 //
-//  Created by 刈部拓未 on 2017/11/04.
-//  Copyright © 2017年 刈部拓未. All rights reserved.
+//  Created by Takumi Karibe on 2017/11/04.
+//  Copyright © 2017年 Takumi Karibe. All rights reserved.
 //
 
 import UIKit

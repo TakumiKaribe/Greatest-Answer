@@ -2,30 +2,28 @@
 //  JsonStore.swift
 //  AsaKore
 //
-//  Created by 刈部拓未 on 2018/06/02.
-//  Copyright © 2018年 刈部拓未. All rights reserved.
+//  Created by Takumi Karibe on 2018/06/02.
+//  Copyright © 2018年 Takumi Karibe. All rights reserved.
 //
 
 import Foundation
 
 struct JsonStore {
-    struct Question {
-        static func fetch() -> Data! {
-            do {
-                return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Questions", ofType: "json")!))
-            } catch {
-                return nil
+    enum Kind {
+        case question, initial
+        var name: String {
+            switch self {
+            case .question: return "Questions"
+            case .initial:  return "Initial"
             }
         }
     }
     
-    struct Initial {
-        static func fetch() -> Data! {
-            do {
-                return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "Initial", ofType: "json")!))
-            } catch {
-                return nil
-            }
+    static func fetch(_ kind: Kind) -> Data! {
+        do {
+            return try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: kind.name, ofType: "json")!))
+        } catch {
+            return nil
         }
     }
 }
