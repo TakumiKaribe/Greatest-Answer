@@ -25,6 +25,9 @@ Pods/*
 #Carthage
 Carthage/*
 
+#Bundler
+vendor/*
+
 #Firebase
 GoogleService-Info.plist
 AdMobSettings.plist
